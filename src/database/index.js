@@ -1,12 +1,13 @@
 import { Client } from "pg";
+import "dotenv/config";
 
 const database = new Client(
   process.env.NODE_ENV === "test"
     ? {
-        user: "",
-        host: "",
-        database: "",
-        password: "",
+        user: "admin",
+        host: "localhost",
+        database: "tests_products",
+        password: "pswr",
         port: 5432,
       }
     : {
